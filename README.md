@@ -1,17 +1,18 @@
-# Project Title
+# Places We've Been
 Version 0.0.0: September 13, 2016
 
-by [Karen Freeman-Smith](https://github.com/karenfreemansmith)
+by [Karen Freeman-Smith](https://github.com/karenfreemansmith) and [Caleb Stevenson](https://gibhub.com/cgrahams)
 
 ## Description
-A program to ...
+A program to record places we've been.
 
 ### Specifications
+* Saves places you've been.
 
 ## Setup/Installation
 * Clone directory
 * Type 'gradle run' inside the directory
-* Navigate to 'http://localhost:5467'
+* Navigate to 'http://localhost:4567'
 
 ## Support & Contact
 For questions, concerns, or suggestions please email karenfreemansmith@gmail.com
@@ -25,4 +26,4 @@ Java, JUnit, Spark, Gradle
 ## Legal
 *Licensed under the GNU General Public License v3.0*
 
-Copyright (c) 2016 Copyright _Karen Freeman-Smith_ All Rights Reserved.
+Copyright (c) 2016 Copyright _Karen Freeman-Smith & Caleb Stevenson_ All Rights Reserved.
