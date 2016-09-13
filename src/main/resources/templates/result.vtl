@@ -1,1 +1,9 @@
-<h1>$result</h1>
+#if ($myPlaces)
+  #foreach($place in $myPlaces)
+    <h1>$place.getPlaceName()</h1>
+  #end
+#else
+  <h1>You need to get out more!</h1>
+#end
+
+<h3><a href="/">Add Someplace</a></h3>

@@ -1,5 +1,6 @@
 import java.util.Map;
 import java.util.HashMap;
+import java.util.ArrayList;
 
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
@@ -18,7 +19,15 @@ public class App {
 
     get("/result", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("result", request.queryParams("item1"));
+      ArrayList<Place> myPlaces=request.session().attribute("places");
+      if(myPlaces==null) {
+        myPlaces = new ArrayList<Place>();
+        request.session().attribute("places", myPlaces);
+      }
+
+      Place myPlace = new Place(request.queryParams("thePlace"));
+      myPlaces.add(myPlace);
+      model.put("myPlaces", myPlaces);
       model.put("template", "templates/result.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
